@@ -7,7 +7,7 @@ public class CryptoCoin {
     private double price;
     private double change24h;
 
-    // Constructors
+    
     public CryptoCoin() {}
     public CryptoCoin(String id, String name, double price, double change24h) {
         this.id = id;
@@ -16,7 +16,7 @@ public class CryptoCoin {
         this.change24h = change24h;
     }
 
-    // Getters & Setters
+    
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
     public String getName() { return name; }
