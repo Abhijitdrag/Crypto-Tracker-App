@@ -4,8 +4,11 @@ FROM eclipse-temurin:17-jdk
 # Set working directory
 WORKDIR /app
 
-# Copy project files
+# Copy all files
 COPY . .
+
+# ✅ FIX: give execute permission to mvnw
+RUN chmod +x mvnw
 
 # Build the application
 RUN ./mvnw clean package -DskipTests
