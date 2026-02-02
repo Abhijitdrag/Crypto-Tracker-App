@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Live Crypto Prices</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Coin</th>
+                    <th>Price (USD)</th>
+                    <th>24h Change (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each = "coin : ${coins}">
+                    <td th:text = "${coin.name}"></td>
+                    <td th:text = "${coin.price}"></td>
+                    <td th:text = "${coin.change24h}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
